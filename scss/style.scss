@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   color: $color-primary;
   overflow-x: hidden;
+  padding: 0 20px;
 }
 
 .heading-h3 {
@@ -40,44 +41,44 @@ body {
   }
 }
 
-
-
-.conteiner {
-  max-width: 1249px;
+.wrapper {
+  max-width: 1229px;
   margin: 0 auto;
   background: linear-gradient(180deg, #F5F5F5 0%, rgba(245, 245, 245, 0) 70.67%);
+}
+
+.continer {
+  width: 100%;
+  height: 100%;
 }
 // Header
 .header-main {
   display: flex;
 
     &__logo {
-      width: 325px;
+      max-width: 325px;
       height: 102px;
-      margin: 94px 0 62px 76px;
+      margin: 0 0 62px -4px;
       vertical-align: middle;
      
     }
 
     &__header-left {
-      flex: 0 0 524px;
-    }
-
-    &__text {
-      margin: 0 0 0 79px;
-      width: 365px;
+      max-width: 365px;
+      margin: 94px 0 0 79px;
     }
 
     &__header-right {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 725px;
+      margin-left: 80px;
     }
 
     &__image {
       clip-path: url(#header-clip);
-      position: absolute;
-      height: 695px;
+      position: relative;
+      width: 100%;
+      height: auto;
       z-index: 2;
       right: 0;
     }
@@ -85,8 +86,8 @@ body {
    &__decor {
       clip-path: url(#header-clip-2);
       position: absolute;
-      width: 725px;
-      height: 696px;
+      width: 100%;
+      height: auto;
       right: 0;
       z-index: 1;
    } 
@@ -123,6 +124,8 @@ body {
     background: #fff;
     color: $color-blue;
     transition: .5s linear;
+    border: 1px dashed #00AEC7;
+    font-weight: 400;
   }
 }
 
@@ -164,6 +167,8 @@ body {
     margin: 35px 0 8px 0;
     text-transform: uppercase;
   }
+
+ 
 }
 
 // items
@@ -186,13 +191,20 @@ body {
   &__title {
     line-height: 115%;
     margin: 22.3px 0 10px 0;
+    color: #000;
+  }
+
+  &__icon {
+    fill: #000;
   }
 
   :hover {
     background: $color-blue;
     color: #fff;
     transition: .5s linear;
+    fill: red;
   }
+
 }
 
 // slider
@@ -200,7 +212,7 @@ body {
 .slideshow-container {
   width: 100%;
   height: 100%;
-  margin: 98px 0 37px 0;
+  margin: 103px 0 32px 0;
 
   &__slide {
     display: flex;
@@ -208,9 +220,6 @@ body {
     align-items: center;
     border-radius: 30%;
 
-    :hover {
-      background-color: rgba(0, 0, 0, 0.8);
-     }
   }
 
   &__image {
@@ -220,21 +229,21 @@ body {
     vertical-align: middle ;
   }
 
-  &__next {
+  &__arrow-next, &__arrow-back {
     cursor: pointer;
     width: auto;
-    transition: .6s linear;
+    transition: .9s ease;
     border-radius: 0 3px 3px 0;
     right: 0;
-
-   
-
   }
 
   &__dots {
     text-align: center;
-    margin-top: 34px;
+    margin-top: 31px;
+    display: flex;
+    justify-content: center;
     font-size: 0;
+    align-items: center;
     
     :nth-child(1) {
       margin-right: 48px;
@@ -299,7 +308,7 @@ body {
   display: flex;
 
   &__left {
-    max-width: 606px;
+    flex:0 0 606px;
     margin-left: 79px;
   }
 
@@ -314,8 +323,6 @@ body {
   &__right {
       position: relative;
       width: 100%;
-      height: 100%;
-
   }
 
   &__image {
@@ -354,3 +361,39 @@ body {
 
 
 }
+
+@media (max-width: 321px){
+  
+  .header-main {
+    flex-direction: column;
+}
+
+  .header-main__logo {
+    width: 145.6px;
+    height: 45.7px;
+  }
+
+  .header-main__text {
+    font-size: 14px;
+    width: 242px;
+    height: 158px;
+  }
+
+  .header-main__header-left {
+    flex:0 0 242px;
+    margin: 16px 0 34px 12px;
+  }
+
+  .header-main__image {
+    width: 254px;
+    height: 255px;
+  }
+  
+  .header-main__decor {
+    width: 254px;
+    height: 255px;
+  }
+
+
+  }
+  
