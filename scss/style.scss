@@ -17,7 +17,7 @@ body {
   font-size: 16px;
   color: $color-primary;
   overflow-x: hidden;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 .heading-h3 {
@@ -42,7 +42,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1229px;
+  max-width: 1249px;
   margin: 0 auto;
   background: linear-gradient(180deg, #F5F5F5 0%, rgba(245, 245, 245, 0) 70.67%);
 }
@@ -74,22 +74,33 @@ body {
       margin-left: 80px;
     }
 
+    &__block-photo {
+      width: 692px;
+    }
+
+    &____block-decor {
+      width: 725px;
+    }
+
     &__image {
       clip-path: url(#header-clip);
       position: relative;
       width: 100%;
       height: auto;
       z-index: 2;
-      right: 0;
+      right: -35px;
+      object-fit: cover;
     }
 
    &__decor {
       clip-path: url(#header-clip-2);
-      position: absolute;
+      position: relative;
       width: 100%;
       height: auto;
-      right: 0;
+      right: -1;
       z-index: 1;
+      object-fit: cover;
+      top: -695px;
    } 
 
    &__jobs {
